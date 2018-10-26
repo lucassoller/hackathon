@@ -1,0 +1,20 @@
+create tablespace redesocialdat
+
+datafile 'C:\oraclexe\app\oracle\oradata\XE\hackatondat01.dbf'
+
+size 100m
+
+autoextend on
+
+next 100m
+
+maxsize 2048m;
+
+
+
+create user redesocial identified by hackaton
+default tablespace oldflixdat;
+
+
+
+grant connect, resource, create view to hackaton
