@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import Map from '../components/mapa/Map'
+import DescricaoHome from '../components/descricao_home/DescricaoHome';
 export default class Home extends Component {
-  render() {
-    return (
-      <div>
-        <Map />
-      </div>
-    )
-  }
+    render() {
+        return (
+            <Fragment>
+                <DescricaoHome />
+
+                <Map />
+            </Fragment>
+        )
+    }
 }
