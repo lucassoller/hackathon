@@ -1,0 +1,14 @@
+.input-form{
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.input-form::placeholder{
+    color: white;
+}

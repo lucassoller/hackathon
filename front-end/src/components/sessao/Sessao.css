@@ -1,0 +1,21 @@
+.sessao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.titulo-sessao {
+    color: white;
+}
+
+.botao-sessao {
+    background: none;
+    border: 1px solid ;
+    color: white;
+}
+
+.div-sessao {
+    background: red;
+}
+
