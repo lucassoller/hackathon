@@ -1,24 +1,18 @@
 package br.com.cwi.crescer.tcc.dominio;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Contato {
-     // public static String getSEQUENCE() {
-    //     return SEQUENCE;
-    // }
-
-    // private static final String SEQUENCE = "USUARIO_SEQ";
+//      public static String getSEQUENCE() {
+//         return SEQUENCE;
+//     }
+//
+//     private static final String SEQUENCE = "CONTATO_SEQ";
 
     @Id
-    // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
-    // @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
+//     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
+//     @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_CONTATO", nullable = false, precision = 10, unique = true)
     private Long id;

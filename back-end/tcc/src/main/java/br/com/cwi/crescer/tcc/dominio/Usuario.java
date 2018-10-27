@@ -10,15 +10,15 @@ import java.util.Optional;
 public class Usuario {
 
 
-    // public static String getSEQUENCE() {
-    //     return SEQUENCE;
-    // }
-
-    // private static final String SEQUENCE = "USUARIO_SEQ";
+//     public static String getSEQUENCE() {
+//         return SEQUENCE;
+//     }
+//
+//     private static final String SEQUENCE = "USUARIO_SEQ";
 
     @Id
-    // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
-    // @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
+//     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
+//     @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "ID_USUARIO", nullable = false, precision = 10, unique = true)
