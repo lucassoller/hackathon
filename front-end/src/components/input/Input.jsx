@@ -30,7 +30,13 @@ renderAvisoInputVazio() {
   render() {
     return (
       <Fragment>
-        <input className="input-form" type="text" placeholder = {this.props.descricao} onBlur={this.validaInput}/>
+        <input type='password' 
+        className="input-form" 
+        type="text"
+        name = {this.props.nome}
+        placeholder = {this.props.descricao} 
+        onBlur={this.validaInput}
+        onChange = {this.props.onChange}/>
         {this.renderAvisoInputVazio()}
         </Fragment>
     )

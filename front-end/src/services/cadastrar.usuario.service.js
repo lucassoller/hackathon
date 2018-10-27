@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default class CadastrarUsuario extends BaseService {
   
-    registrarUsuario(nomeCompleto, email, senha, imagem, telefone){
+    registrar(nomeCompleto, email, senha, imagem, telefone){
         const usuarioDto = {
             nomeCompleto: nomeCompleto,
             email: email,

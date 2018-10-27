@@ -1,0 +1,16 @@
+.foto-form{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #C4C4C4;
+}
+
+.foto-form img{
+    height: 100%;
+}

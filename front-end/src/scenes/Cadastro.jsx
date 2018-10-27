@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react'
-import { Input, Form } from '../components/index'
+import { Input, Form, FotoForm } from '../components/index'
 import CadastrarUsuarioService from '../services/cadastrar.usuario.service'
 
 export default class Cadastro extends Component {
 
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
@@ -12,10 +12,9 @@ export default class Cadastro extends Component {
       email: '',
       senha: '',
       imagem: '',
-      telefone: '',
-      confirmaSenha: '',
-  }
-
+      telefone: ''
+    }
+    this.cadastrarUsuarioService = new CadastrarUsuarioService();
   }
 
   handleChange = (event) => {
@@ -23,19 +22,62 @@ export default class Cadastro extends Component {
     const name = target.name
     const value = target.value
     this.setState({ [name]: value })
-}
+  }
+
+  limparDadosState() {
+    this.setState({
+      nomeCompleto: '',
+      email: '',
+      senha: '',
+      imagem: '',
+      telefone: ''
+    })
+  }
+
+  onSubmitRegistraDados = (event) => {
+    event.preventDefault()
+    this.cadastroUserService.registrar(this.state.nomeCompleto,
+       this.state.email,
+       this.state.senha,
+       this.state.imagem,
+       this.state.telefone).then((response) => {
+    }).catch((err) => {
+
+    })
+  }
 
   render() {
     return (
       <Fragment>
-          <Form titulo = 'Cadastro' descricaoBotaoEnviar = 'Cadastrar'>
-          <Input descricao="Nome" />
-          <Input descricao="Senha" />
-          <Input descricao="Confirmar senha   " />
-          <Input descricao="Email" />
-          <Input descricao="Telefone" />
+        <Form titulo='Cadastro' descricaoBotaoEnviar='Cadastrar'
+        onSubmit = {this.onSubmitRegistraDados}>
+          <FotoForm 
+          imagemUrl = {this.state.imagem}
+          />
+          <Input descricao="Imagem"
+          nome = 'imagem'
+          onChange = {this.handleChange}
+          />
+          <Input descricao="Nome"
+          nome = 'nomeCompleto'
+          onChange = {this.handleChange}
+          />
+          <Input descricao="Senha"
+          nome = 'senha'
+          onChange = {this.handleChange}
+          />
+          <Input descricao="Confirmar senha"
+          />
+          <Input descricao="Email"
+          nome = 'email'
+          onChange = {this.handleChange}
+          />
+          <Input descricao="Telefone"
+          nome = 'telefone'
+          onChange = {this.handleChange}
+          />
         </Form>
-    </Fragment>
+      </Fragment>
     )
   }
 }
