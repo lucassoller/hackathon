@@ -24,7 +24,11 @@ a, .item-menu {
 .item-menu {
     padding: 25px;
     text-decoration: none;
+}
 
+a:hover {
+    color: #24657F;
+    transition: scale(1.2)
 }
 
 li img {
