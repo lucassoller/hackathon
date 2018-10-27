@@ -1,0 +1,32 @@
+.header {
+    height: 80px;
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+a, .item-menu {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.lista-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.item-menu {
+    padding: 25px;
+    text-decoration: none;
+
+}
+
+li img {
+    height: 70px;
+}
