@@ -2,6 +2,16 @@ import React, { Component, Fragment } from 'react'
 import './Map.css'
 import GoogleMapReact from 'google-map-react';
 
+const Nexmo = require('nexmo')
+const nexmo = new Nexmo({
+  apiKey: 'b54fe1bf',
+  apiSecret: '****************'
+})
+
+const from = 'Nexmo'
+const to = '5551997569001'
+const text = 'Hello from Nexmo'
+
 const MapPointer = ({ text }) => (
     <div style={{
         color: 'white', 
@@ -25,6 +35,7 @@ export default class Map extends Component {
 
     componentDidMount() {
         this.actualPosition()
+        nexmo.message.sendSms(from, to, text)
     }
 
 
@@ -44,6 +55,8 @@ export default class Map extends Component {
             })
         })
     }
+
+
 
     render() {
         return (
