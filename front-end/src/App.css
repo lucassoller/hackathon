@@ -8,12 +8,13 @@ html,body{
 body{
   height: 100%;
   position: relative;
-  background-color: #E5E5E5;
+  background: #E5E5E5;
 }
 
 *{
   box-sizing: border-box;
 }
+
 
 input:focus{
   outline: thin dotted;

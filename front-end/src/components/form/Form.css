@@ -1,10 +1,53 @@
 .form{
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 3px;
+    padding: 20px;
     width: 35%;
     margin-top:50px;
     margin-right: auto;
     margin-left: auto;
 }
+
+.form h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 34px;
+    text-align: center;
+}
+
+.foto-form{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #C4C4C4;
+}
+
+.foto-form img{
+    height: 100%;
+}
+
+.botao-enviar{
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
+    height: 54px;
+    width: 80%;
+    background-color: #1ED760;
+    border-radius: 30px; 
+}
+
+.botao-enviar::placeholder{
+    font-size: 16px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
