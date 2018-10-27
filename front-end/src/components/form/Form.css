@@ -1,7 +1,6 @@
 .form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: #FFFFFF;
     border-radius: 3px;
@@ -36,18 +35,26 @@
 }
 
 .botao-enviar{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
     margin-top: 25px;
     border: none;
     cursor: pointer;
     height: 54px;
     width: 80%;
     background-color: #1ED760;
-    border-radius: 30px; 
+    border-radius: 30px;
 }
 
 .botao-enviar::placeholder{
     font-size: 16px;
     color: white;
     font-family: 'Roboto', sans-serif;
+}
+
+.botao-enviar:hover{
+    background-color: #16e25e;
 }
 

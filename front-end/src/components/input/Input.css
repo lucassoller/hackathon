@@ -12,3 +12,9 @@
 .input-form::placeholder{
     color: #C0C1C4;
 }
+
+.aviso-input{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: red;
+    font-size: 15px;
+}   
