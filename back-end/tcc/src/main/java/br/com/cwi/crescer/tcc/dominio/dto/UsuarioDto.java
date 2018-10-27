@@ -6,16 +6,22 @@ public class UsuarioDto {
 
     private String nomeCompleto;
 
-    private String apelido;
-
     private String email;
 
     private String senha;
 
-    private LocalDate dataNascimento;
-
     private String imagem;
 
+    private String telefone;
+
+    public String getTelefone() {
+        return this.telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+    
     public Long getId() {
         return this.id;
     }
@@ -30,14 +36,6 @@ public class UsuarioDto {
 
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
-    }
-
-    public String getApelido() {
-        return this.apelido;
-    }
-
-    public void setApelido(String apelido) {
-        this.apelido = apelido;
     }
 
     public String getEmail() {
@@ -56,14 +54,6 @@ public class UsuarioDto {
         this.senha = senha;
     }
 
-    public LocalDate getDataNascimento() {
-        return this.dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public String getImagem() {
         return this.imagem;
     }
@@ -71,4 +61,6 @@ public class UsuarioDto {
     public void setImagem(String imagem) {
         this.imagem = imagem;
     }
+
+
 }

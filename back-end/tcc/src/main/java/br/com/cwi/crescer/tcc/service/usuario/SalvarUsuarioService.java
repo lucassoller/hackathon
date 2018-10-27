@@ -29,8 +29,8 @@ public class SalvarUsuarioService {
         if(Objects.isNull(usuarioDto.getSenha()) || usuarioDto.getSenha().isEmpty()){
            throw new IllegalArgumentException("A senha não pode estar em branco");
         }
-        if(Objects.isNull(usuarioDto.getDataNascimento())){
-            throw new IllegalArgumentException("A data de nascimento não pode estar em branco");
+        if(Objects.isNull(usuarioDto.getTelefone()) || usuarioDto.getTelefone().isEmpty()){
+            throw new IllegalArgumentException("O telefone não pode estar em branco");
         }
         if(usuarioRepository.findByEmail(usuarioDto.getEmail()).isPresent()){
             throw new IllegalArgumentException("Este e-mail já está em uso");
@@ -40,9 +40,8 @@ public class SalvarUsuarioService {
 
         usuario.setNomeCompleto(usuarioDto.getNomeCompleto());
         usuario.setEmail(usuarioDto.getEmail());
-        usuario.setDataNascimento(usuarioDto.getDataNascimento());
-        usuario.setApelido(usuarioDto.getApelido());
         usuario.setImagem(usuarioDto.getImagem());
+        usuario.setTelefone(usuarioDto.getTelefone());
 
         // Criptografia criptografia = new Criptografia();
         // usuario.setSenha(criptografia.criptografarSenha(usuarioDto.getSenha()));

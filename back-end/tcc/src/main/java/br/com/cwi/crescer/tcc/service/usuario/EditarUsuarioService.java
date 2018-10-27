@@ -29,11 +29,20 @@
 //             usuarioParaEditar.setNomeCompleto(edicaoDto.getNomeCompleto());
 //         }
 
-//         if(!Objects.isNull(edicaoDto.getApelido()) && !edicaoDto.getApelido().isEmpty()){
-//             usuarioParaEditar.setApelido(edicaoDto.getApelido());
-//         }
 //         if(!Objects.isNull(edicaoDto.getImagem()) && !edicaoDto.getImagem().isEmpty()){
 //             usuarioParaEditar.setImagem(edicaoDto.getImagem());
+//         }
+
+//         if(!Objects.isNull(edicaoDto.getEmail()) && !edicaoDto.getEmail().isEmpty()){
+//             usuarioParaEditar.setEmail(edicaoDto.getEmail());
+//         }
+
+//         if(!Objects.isNull(edicaoDto.getSenha()) && !edicaoDto.getSenha().isEmpty()){
+//             usuarioParaEditar.setSenha(edicaoDto.getSenha());
+//         }
+
+//         if(!Objects.isNull(edicaoDto.getTelefone()) && !edicaoDto.getTelefone().isEmpty()){
+//             usuarioParaEditar.setTelefone(edicaoDto.getTelefone());
 //         }
         
 //         usuarioRepository.save(usuarioParaEditar);

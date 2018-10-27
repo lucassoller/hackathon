@@ -1,5 +1,4 @@
 package br.com.cwi.crescer.tcc.service.usuario;
-
 import br.com.cwi.crescer.tcc.dominio.Usuario;
 import br.com.cwi.crescer.tcc.repository.IUsuarioRepository;
 import br.com.cwi.crescer.tcc.repository.projection.UsuarioResponse;
