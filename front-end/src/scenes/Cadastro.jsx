@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Input, Form, FotoForm } from '../components/index'
+import { Input, Form, FotoForm, BotaoContato } from '../components/index'
 import UserService from '../services/user.service'
 
 export default class Cadastro extends Component {
@@ -12,7 +12,8 @@ export default class Cadastro extends Component {
       email: '',
       senha: '',
       imagem: '',
-      telefone: ''
+      telefone: '',
+      mostrarCadastrarContato: false
     }
     this.userService = new UserService();
   }
@@ -22,6 +23,10 @@ export default class Cadastro extends Component {
     const name = target.name
     const value = target.value
     this.setState({ [name]: value })
+  }
+
+  onClickChangeStatusMostrarCadastroContato = () => {
+    this.setState({mostrarCadastrarContato: !this.state.mostrarCadastrarContato})
   }
 
   limparDadosState() {
@@ -50,6 +55,7 @@ export default class Cadastro extends Component {
     return (
       <Fragment>
         <Form titulo='Cadastro' descricaoBotaoEnviar='Cadastrar'
+        descricaoBotaoContato = 'Criar contato'
         onSubmit = {this.onSubmitRegistraDados}>
           <FotoForm 
           imagemUrl = {this.state.imagem}
@@ -76,6 +82,7 @@ export default class Cadastro extends Component {
           nome = 'telefone'
           onChange = {this.handleChange}
           />
+          <BotaoContato/>
         </Form>
       </Fragment>
     )
