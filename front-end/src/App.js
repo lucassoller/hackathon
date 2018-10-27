@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
 import {Cadastro, Login, Home} from './scenes/index'
-import Home from './scenes/Home';
 
 class App extends Component {
   render() {
