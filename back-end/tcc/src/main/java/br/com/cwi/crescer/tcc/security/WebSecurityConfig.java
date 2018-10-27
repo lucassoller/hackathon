@@ -1,5 +1,5 @@
 // package br.com.cwi.crescer.tcc.security;
-
+//
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.beans.factory.annotation.Value;
 // import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@
 // import org.springframework.security.config.http.SessionCreationPolicy;
 // import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 // import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
+//
 // @Configuration
 // @EnableWebSecurity
 // @EnableGlobalMethodSecurity(
@@ -23,16 +23,16 @@
 //     prePostEnabled = true
 // )
 // public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
+//
 //     @Value("${security.public.path}")
 //     private String publicPath;
-
+//
 //     @Autowired
 //     CustomUserDetailsService customUserDetailsService;
-
+//
 //     @Autowired
 //     private JwtAuthenticationFilter jwtAuthenticationFilter;
-
+//
 //     @Override
 //     public void configure(AuthenticationManagerBuilder auth) throws Exception {
 //         auth
@@ -41,13 +41,13 @@
 //         auth.inMemoryAuthentication().withUser("user2").password("test123").roles("MANAGER");
 //         auth.inMemoryAuthentication().withUser("user3").password("test123").roles("ADMIN");
 //     }
-
+//
 //     @Bean(BeanIds.AUTHENTICATION_MANAGER)
 //     @Override
 //     public AuthenticationManager authenticationManagerBean() throws Exception {
 //         return super.authenticationManagerBean();
 //     }
-
+//
 //     @Override
 //     protected void configure(HttpSecurity http) throws Exception {
 //         http
@@ -62,11 +62,11 @@
 //                 .permitAll()
 //                 .anyRequest()
 //                 .authenticated();
-
+//
 //         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-
+//
 //     }
-
+//
 //     @SuppressWarnings("deprecation")
 //     @Bean
 //     public static NoOpPasswordEncoder passwordEncoder() {

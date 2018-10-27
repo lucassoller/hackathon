@@ -3,7 +3,6 @@ package br.com.cwi.crescer.tcc.service.usuario;
 import br.com.cwi.crescer.tcc.dominio.Usuario;
 import br.com.cwi.crescer.tcc.dominio.dto.UsuarioDto;
 import br.com.cwi.crescer.tcc.repository.IUsuarioRepository;
-// import br.com.cwi.crescer.tcc.security.password.Criptografia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Objects;
@@ -42,9 +41,6 @@ public class SalvarUsuarioService {
         usuario.setEmail(usuarioDto.getEmail());
         usuario.setImagem(usuarioDto.getImagem());
         usuario.setTelefone(usuarioDto.getTelefone());
-
-        // Criptografia criptografia = new Criptografia();
-        // usuario.setSenha(criptografia.criptografarSenha(usuarioDto.getSenha()));
         usuario.setSenha(usuarioDto.getSenha());
         usuarioRepository.save(usuario);
     }

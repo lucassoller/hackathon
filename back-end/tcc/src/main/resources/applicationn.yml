@@ -13,8 +13,8 @@
  spring:
    datasource:
      url: jdbc:oracle:thin:@localhost:1521/xe
-     username: redesocial
-     password: redesocial
+     username: hackathon
+     password: hackathon
      driver-class-name: oracle.jdbc.OracleDriver
 
    jackson:

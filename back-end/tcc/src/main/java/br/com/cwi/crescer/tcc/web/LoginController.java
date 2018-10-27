@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("public/login")
+@RequestMapping("/public/login")
 @RestController
 public class LoginController {
     @Autowired
