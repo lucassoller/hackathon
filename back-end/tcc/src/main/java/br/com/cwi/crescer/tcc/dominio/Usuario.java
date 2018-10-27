@@ -25,10 +25,10 @@ public class Usuario {
     private Long id;
 
 
-    @Column(name = "NOME_COMPLETO", nullable = false, length = 256)
+    @Column(name = "NOME_COMPLETO", nullable = false, length = 50)
     private String nomeCompleto;
 
-    @Column(name = "EMAIL", nullable = false, length = 256, unique = true)
+    @Column(name = "EMAIL", nullable = false, length = 30, unique = true)
     private String email;
 
     @JsonIgnore
@@ -44,10 +44,10 @@ public class Usuario {
     @Column(name = "TELEFONE", length = 12, nullable = false)
     private String telefone;
 
-    @ManyToOne
-    @JoinColumn(name = "LOCALIZACAO", nullable = false)
-    @JsonIgnore
-    private Localizacao localizacao;
+    // @ManyToOne(name = "ID_LOCALIZACAO")
+    // @JoinColumn(name = "LOCALIZACAO", nullable = false)
+    // @JsonIgnore
+    // private Localizacao localizacao;
 
     public Usuario() {
     }
@@ -100,25 +100,25 @@ public class Usuario {
         this.imagem = imagem;
     }
 
-    public Localizacao getLocalizacao() {
-        return this.localizacao;
-    }
+    // public Localizacao getLocalizacao() {
+    //     return this.localizacao;
+    // }
 
-    public void setLocalizacao(Localizacao localizacao) {
-        this.localizacao = localizacao;
-    }
+    // public void setLocalizacao(Localizacao localizacao) {
+    //     this.localizacao = localizacao;
+    // }
 
     public Optional<String> getRole() {
         return Optional.of("Usuario normal");
     }
 
-    public Usuario(Long id, String nomeCompleto, String email, String senha, String imagem, String telefone, Localizacao localizacao) {
+    public Usuario(Long id, String nomeCompleto, String email, String senha, String imagem, String telefone){ //Localizacao localizacao) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
         this.imagem = imagem;
         this.telefone = telefone;
-        this.localizacao = localizacao;
+        // this.localizacao = localizacao;
     }
 }

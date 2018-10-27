@@ -6,5 +6,4 @@ public interface UsuarioResponse {
     String getNomeCompleto();
     String getEmail();
     String getImagem();
-    String getApelido();
 }
