@@ -1,4 +1,4 @@
-import axios from 'aixos'
+import axios from 'axios'
 import BaseService from './base.service'
 
 export default class UserService extends BaseService {

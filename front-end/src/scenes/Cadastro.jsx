@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Input, Form, FotoForm } from '../components/index'
-import CadastrarUsuarioService from '../services/cadastrar.usuario.service'
+import UserService from '../services/user.service'
 
 export default class Cadastro extends Component {
 
@@ -14,7 +14,7 @@ export default class Cadastro extends Component {
       imagem: '',
       telefone: ''
     }
-    this.cadastrarUsuarioService = new CadastrarUsuarioService();
+    this.userService = new UserService();
   }
 
   handleChange = (event) => {
@@ -36,7 +36,7 @@ export default class Cadastro extends Component {
 
   onSubmitRegistraDados = (event) => {
     event.preventDefault()
-    this.cadastroUserService.registrar(this.state.nomeCompleto,
+    this.userService.registrar(this.state.nomeCompleto,
        this.state.email,
        this.state.senha,
        this.state.imagem,
