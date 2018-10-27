@@ -10,24 +10,23 @@ import java.util.Optional;
 public class Usuario {
 
 
-    public static String getSEQUENCE() {
-        return SEQUENCE;
-    }
+    // public static String getSEQUENCE() {
+    //     return SEQUENCE;
+    // }
 
-    private static final String SEQUENCE = "USUARIO_SEQ";
+    // private static final String SEQUENCE = "USUARIO_SEQ";
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
-    @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
+    // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
+    // @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "ID_USUARIO", nullable = false, precision = 10, unique = true)
     private Long id;
 
 
     @Column(name = "NOME_COMPLETO", nullable = false, length = 256)
     private String nomeCompleto;
-
-    @Column(name = "APELIDO", length = 50)
-    private String apelido;
 
     @Column(name = "EMAIL", nullable = false, length = 256, unique = true)
     private String email;
@@ -36,11 +35,30 @@ public class Usuario {
     @Column(name = "SENHA", nullable = false, length = 128)
     private String senha;
 
-    @Column(name = "DATA_NASCIMENTO", nullable = false, length = 256)
-    private LocalDate dataNascimento;
+    // @Column(name = "DATA_NASCIMENTO", nullable = false, length = 256)
+    // private LocalDate dataNascimento;
 
     @Column(name = "IMAGEM", length = 512)
     private String imagem;
+
+    @Column(name = "TELEFONE", length = 12, nullable = false)
+    private String telefone;
+
+    @ManyToOne
+    @JoinColumn(name = "LOCALIZACAO", nullable = false)
+    @JsonIgnore
+    private Localizacao localizacao;
+
+    public Usuario() {
+    }
+
+    public String getTelefone() {
+        return this.telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
     public Long getId() {
         return this.id;
@@ -56,14 +74,6 @@ public class Usuario {
 
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
-    }
-
-    public String getApelido() {
-        return this.apelido;
-    }
-
-    public void setApelido(String apelido) {
-        this.apelido = apelido;
     }
 
     public String getEmail() {
@@ -82,14 +92,6 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public LocalDate getDataNascimento() {
-        return this.dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public String getImagem() {
         return this.imagem;
     }
@@ -98,7 +100,25 @@ public class Usuario {
         this.imagem = imagem;
     }
 
+    public Localizacao getLocalizacao() {
+        return this.localizacao;
+    }
+
+    public void setLocalizacao(Localizacao localizacao) {
+        this.localizacao = localizacao;
+    }
+
     public Optional<String> getRole() {
         return Optional.of("Usuario normal");
+    }
+
+    public Usuario(Long id, String nomeCompleto, String email, String senha, String imagem, String telefone, Localizacao localizacao) {
+        this.id = id;
+        this.nomeCompleto = nomeCompleto;
+        this.email = email;
+        this.senha = senha;
+        this.imagem = imagem;
+        this.telefone = telefone;
+        this.localizacao = localizacao;
     }
 }
