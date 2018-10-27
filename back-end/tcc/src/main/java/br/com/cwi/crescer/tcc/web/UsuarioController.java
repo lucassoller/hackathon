@@ -30,11 +30,11 @@ public class UsuarioController {
     @Autowired
     private RemoverUsuarioService removerUsuarioService;
 
-    @Autowired
-    private BuscarUsuarioPorNomeOuEmailService buscarUsuarioPorNomeOuEmailService;
+    // @Autowired
+    // // private BuscarUsuarioPorNomeOuEmailService buscarUsuarioPorNomeOuEmailService;
 
-    @Autowired
-    IUsuarioRepository usuarioRepository;
+    // @Autowired
+    // IUsuarioRepository usuarioRepository;
 
     @Autowired
     BuscarUsuarioPorEmailService buscarUsuarioPorEmailService;
@@ -57,11 +57,6 @@ public class UsuarioController {
     // public UsuarioResponse buscarUsuarioLogadoPorId(@AuthenticationPrincipal UserPrincipal userPrincipal){
     //     return buscarUsuarioResponsePorIdService.buscar(userPrincipal.getId());
     // }
-
-    @GetMapping("/buscar/{nomeCompletoOuEmail}")
-    public List<UsuarioResponse> buscarPorNomeOuEmail(@PathVariable("nomeCompletoOuEmail") String nomeCompletoOuEmail){
-        return buscarUsuarioPorNomeOuEmailService.buscar(nomeCompletoOuEmail);
-    }
 
     // @PutMapping
     // public void editar(@AuthenticationPrincipal UserPrincipal userPrincipal, @RequestBody EdicaoDto edicaoDto){

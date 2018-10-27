@@ -1,5 +1,5 @@
 export default class BaseService {
     constructor() {
-        this.baseUrl = 'localhost:8083/'
+        this.baseUrl = 'http://localhost:8083/'
     }
 }

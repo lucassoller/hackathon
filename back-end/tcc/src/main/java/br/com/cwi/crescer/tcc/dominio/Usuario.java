@@ -44,10 +44,10 @@ public class Usuario {
     @Column(name = "TELEFONE", length = 12, nullable = false)
     private String telefone;
 
-    // @ManyToOne(name = "ID_LOCALIZACAO")
-    // @JoinColumn(name = "LOCALIZACAO", nullable = false)
+    // @ManyToOne(name = "ID_")
+    // @JoinColumn(name = "", nullable = false)
     // @JsonIgnore
-    // private Localizacao localizacao;
+    // private  ;
 
     public Usuario() {
     }
@@ -100,25 +100,25 @@ public class Usuario {
         this.imagem = imagem;
     }
 
-    // public Localizacao getLocalizacao() {
-    //     return this.localizacao;
+    // public  get() {
+    //     return this.;
     // }
 
-    // public void setLocalizacao(Localizacao localizacao) {
-    //     this.localizacao = localizacao;
+    // public void set( ) {
+    //     this. = ;
     // }
 
     public Optional<String> getRole() {
         return Optional.of("Usuario normal");
     }
 
-    public Usuario(Long id, String nomeCompleto, String email, String senha, String imagem, String telefone){ //Localizacao localizacao) {
+    public Usuario(Long id, String nomeCompleto, String email, String senha, String imagem, String telefone){ // ) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
         this.imagem = imagem;
         this.telefone = telefone;
-        // this.localizacao = localizacao;
+        // this. = ;
     }
 }

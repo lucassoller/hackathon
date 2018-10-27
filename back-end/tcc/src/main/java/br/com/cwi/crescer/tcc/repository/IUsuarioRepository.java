@@ -18,8 +18,8 @@ public interface IUsuarioRepository extends Repository<Usuario, Long> {
 
     Optional<Usuario> findByEmail(String email);
 
-    @Query("select u from Usuario u where u.nomeCompleto like :nomeCompletoOuEmail% or u.email like :nomeCompletoOuEmail%")
-    List<UsuarioResponse> findByNomeCompletoOrEmail(@Param("nomeCompletoOuEmail")String nomeCompletoOuEmail);
+    // @Query("select u from Usuario u where u.nomeCompleto like :nomeCompletoOuEmail% or u.email like :nomeCompletoOuEmail%")
+    // List<UsuarioResponse> findByNomeCompletoOrEmail(@Param("nomeCompletoOuEmail")String nomeCompletoOuEmail);
 
     Optional<Usuario> findByEmailAndSenha(String email, String senha);
 
