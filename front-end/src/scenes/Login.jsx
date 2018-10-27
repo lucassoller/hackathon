@@ -52,7 +52,7 @@ export default class Login extends Component {
           <Input descricao="Senha"
           nome =  'senha'
           onChange = {this.handleChange}
-          />
+          />           
         </Form>
     </Fragment>
     )

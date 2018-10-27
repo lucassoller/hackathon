@@ -1,0 +1,13 @@
+.botao-adicionar-contato{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    height: 56px;
+    width: 100%;
+    background-color: #FF4040;
+    border-radius: 5px;
+}
+
+.botao-adicionar-contato:hover{
+    background-color: #FF7256;
+}
